@@ -7,9 +7,6 @@ from pysentimiento import create_analyzer
 
 app = FastAPI()
 
-cv = pickle.load(open("count_vectorizer.pickle", "rb"))
-RF = pickle.load(open("RF_nlp.pickle", "rb"))
-
 class Pred(BaseModel):
     review: str
 
@@ -30,4 +27,6 @@ async def read_item(n: int = 10):
 
 @app.post("/pred/")
 async def create_item(pred: Pred):
+    cv = pickle.load(open("count_vectorizer.pickle", "rb"))
+    RF = pickle.load(open("RF_nlp.pickle", "rb"))
     return {'review': pred.review, 'feeling': feeling(pred.review), 'score': str(RF.predict(cv.transform([pred.review]))[0])}
