@@ -8,4 +8,4 @@
 Para acceder al endpoint que predice las estrellas se debe añadir al enlace http://127.0.0.1:8000/docs, allí hay una pestaña verde que dice post, al abrirla y darle click en el boton `try out` le permitirá editar el request body, reemplace `string` (dejando las comillas) por la reseña que desee y ejecútelo. Más abajo hay un cuadro de response body donde se muestra la reseña, el sentimiento identificado y las estrellas predecidas.
 
 4. Subimos la API un servidor cloud por medio de heroku y el enlace es https://sentimientosnlp.herokuapp.com. Funciona de la misma forma que el enlace local.
-Es posible que el enlace falle debido a que implementa algoritmos de inteligencia artificial muy pesado y sobrepasa el límite que heroku permite con facilidad que heroku permite, esto es así porque usamos un servicio gratuito.
+Es posible que el enlace falle debido a que implementa algoritmos de inteligencia artificial muy pesado y sobrepasa el límite que heroku permite con facilidad que heroku permite, esto es así porque usamos el servicio gratuito.
