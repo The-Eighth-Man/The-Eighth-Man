@@ -22,7 +22,7 @@ def feeling(review):
 
 @app.get("/")
 async def read_item(n: int = 10):
-    df = pd.read_csv('db.csv')     
+    df = pd.read_csv('db_reviews_claro_feelings.csv')     
     return df.loc[0:n-1].to_dict('records')
 
 @app.post("/pred/")

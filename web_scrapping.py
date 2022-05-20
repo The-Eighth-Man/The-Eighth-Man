@@ -13,4 +13,4 @@ reviews_claro = reviews_all(
 
 df = pd.DataFrame(np.array(reviews_claro),columns=['review'])
 df = df.join(pd.DataFrame(df.pop('review').tolist()))
-df.to_excel('reviews_claro.xlsx')
+df.to_excel('db_reviews_claro.xlsx')
